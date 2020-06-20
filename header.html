@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit|ie-stand">
+    <title>
+        {% if pageTitle.length %}
+        {{ pageTitle }}
+        {% else %}
+        {{ siteName }}
+        {% /if %}
+    </title>
+    <meta name="author" content="Havee">
+
+    <!-- fav and touch icons  -->
+    <link rel="shortcut icon" href="/asset/images/favicon.png">
+    <link rel="apple-touch-icon" href="/asset/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/asset/images/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/asset/images/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/asset/images/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/asset/images/apple-touch-icon-180x180.png">
+
+    {% if post %}
+    <link rel="canonical" href="{{ post.url }}">
+    {% /if %}
+    <link rel="stylesheet" href="asset/css/style.css" media="all">
+
+    <!-- atom & rss feed -->
+    <link rel="alternate" type="application/rss+xml" href="rss.xml" title="Feiffy RSS Feed">
+
+    <meta name="baidu-site-verification" content="BvD3CNBzK6" />
+    <meta name="google-site-verification" content="oE8rOfWaq0A-pkv0HY170kkzgB1hM1j6zRTyRBgRw78" />
+    <meta name="msvalidate.01" content="FE0D1D87A075E1003B82C7446EE360ED" />
+</head>
+
+
+<body>
+    <div class="container">
+        <!--[if lt IE 9]>
+<div class="alert alert-warning">
+  <p>Your Internet Explorer is not supported. Please upgrade your Internet Explorer to version 9+, or use latest <a href="http://www.google.com/chrome/" target="_blank" class="alert-link">Google chrome</a>、<a href="http://www.mozilla.org/firefox/" target="_blank" class="alert-link">Mozilla Firefox</a>.</p>
+  <p>If you are using IE 9 or later, make sure you <a href="http://windows.microsoft.com/en-us/internet-explorer/use-compatibility-view#ie=ie-8" target="_blank" class="alert-link">turn off "Compatibility view"</a>.</p>
+</div>
+<![endif]-->
+        <header class="header">
+            <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse"
+                data-target=".bs-navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="title"><a title="Feiffy's Blog" href="{{ siteURL }}index.html">{{ siteName }}</a></div>
+            <ul class="nav navbar-nav collapse navbar-collapse bs-navbar-collapse navbar-right">
+                <li><a href="archives.html" title="Archive"><span class='fa fa-archive fa-2x'></span></a></li>
+                <li><a href="about.html" title="About"><span class='fa fa-user fa-2x'></span></a></li>
+                <li><a href="atom.xml" target="_blank" title="订阅" rel="nofollow"><span
+                            class='fa fa-rss fa-2x'></span></a></li>
+            </ul>
+        </header>

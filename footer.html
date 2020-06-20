@@ -1,0 +1,22 @@
+    <footer class="footer text-center">
+        <p>&copy; 2016-2020 <a href="{{ siteURL }}" title="{{ siteName }}">Feiffy's Blog</a> Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; Theme forked from <a target="_blank" href="https://github.com/vgist/vgist.github.io">vgist</a>.</p>
+        <p>Articles are licensed under <a href="//creativecommons.org/licenses/by/3.0/" title="CC BY 3.0 License">the CC BY 3.0</a></p>
+    </footer>
+
+</div>
+
+<script src="asset/jquery.min.js"></script>
+<script src="asset/bootstrap.min.js"></script>
+<script src="asset/webcore.js"></script>
+<script src="asset/jquery.qrcode.min.js"></script>
+
+<script>
+    $("#code").qrcode({
+        width: 100,
+        height: 100,
+        text: "http:" + document.location
+    });
+</script>
+</body>
+
+</html>

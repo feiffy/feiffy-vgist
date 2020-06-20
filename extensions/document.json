@@ -1,0 +1,33 @@
+[
+   
+   {
+      "title":"featured",
+      "variableName":"featured_image",
+      "inputFieldHeight":44,
+      "exampleText":"featured image path"
+   },
+   {
+      "title":"excerpt",
+      "variableName":"excerpt",
+      "inputFieldHeight":66,
+      "exampleText":""
+   },
+   {
+      "title":"seo KW",
+      "variableName":"seo_keywords",
+      "inputFieldHeight":44,
+      "exampleText":"seo keywords"
+   },
+   {
+      "title":"seo Des",
+      "variableName":"seo_des",
+      "inputFieldHeight":66,
+      "exampleText":"seo description"
+   },
+   {
+      "title":"是否该月份最后篇文章",
+      "variableName":"month_last",
+      "inputFieldHeight":22,
+      "exampleText":"如果是则填写true"
+   }
+]

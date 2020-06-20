@@ -1,0 +1,91 @@
+<article class="wrapper clearfix">
+    <div class="col-md-9">
+        {% for p in posts %}
+        <h3 class="title"><a href="{{ p.url }}">{{ p.title }}</a><time class="small">{{ p.date }}</time></h3>
+        {% if p.ext_featured_image.length %}
+        <div class="f-img"><img src="{{ p.ext_featured_image }}" /></div>
+        {% /if %}
+        <div class="a-content">
+            {% if p.ext_small_image.length %}
+                <div class="a-content-img">
+                    <img src="{{ p.ext_small_image }}" />
+                </div>
+            {% /if %}
+            <div class="a-content-text">
+            {% if p.ext_excerpt.length %}
+                {{ p.ext_excerpt }}
+            {% else %}
+                {{ p.desContent }}
+            {% /if %}
+            </div>
+        </div>
+        <div class="read-more clearfix">
+            <div class="more-left left">
+            {% if p.readMore.length %} <a href="{{ p.url }}">Read more</a>&nbsp;&nbsp; {% /if %}
+              <span class="date">{{ p.date }}</span>
+              {% if p.cats.@count %}<span>posted in&nbsp;</span> {% /if %}
+                      {% for cat in p.cats %}
+                            <span class="posted-in"><a href='{{ cat.url }}'>{{ cat.name }}</a></span>
+                      {% /for %} 
+              
+
+            </div>
+            <div class="more-right right">
+            <span class="comments">
+                {% if ext_disqus_shortname.length %}
+                  <a href="{{ siteURL }}{{p.url}}#disqus_thread">comments</a>
+                {% /if %}
+
+                {% if ext_duoshuo_shortname.length %}
+                  &nbsp;<a  class="ds-thread-count" data-thread-key="{{p.url}}" data-count-type="comments" href="{{p.url}}#ds-thread"></a>
+                {% /if %} 
+            </span>
+            </div>
+          </div>
+        {% /for %}
+
+        <!-- Pagination links -->
+        <div class="pull-right">
+            {% if prevPageUrl.length %}<a class="btn btn-primary btn-sm" href="{{ prevPageUrl }}">&laquo; Prev</a>{% /if %} 
+
+            {% if nextPageUrl.length %}<a class="btn btn-primary btn-sm" href="{{ nextPageUrl }}">&raquo; Next</a>{% /if %} 
+  
+        </div>
+    </div>
+    <aside class="col-md-3 visible-lg visible-md">
+        <section>
+            <h3 class="title">分类目录</h3>
+            <ul>
+                {% for p in categoriesTree %}
+                <li><a href="{{ p.url }}" rel="nofollow">{{ p.name }}</a>
+                    {% if p.children.@count %} <ul> {% /if %}
+                        {% for p2 in p.children %}
+                              <li><a href="{{ p2.url }}">{{ p2.name }}</a>
+                                {% if p2.children.@count %} <ul> {% /if %}
+                                    {% for p3 in p2.children %}
+                                    <li><a href="{{ p3.url }}">{{ p3.name }}</a>
+                                    </li>
+                                    {% /for %}
+                                {% if p2.children.@count %} </ul> {% /if %}
+                            </li>
+                        {% /for %}
+                    {% if p.children.@count %} </ul> {% /if %}
+                </li>
+                {% /for %}
+           </ul>
+        </section>
+
+        <section>
+            <h3 class="title">标签</h3>
+            <ul class="tag-box">
+                {% for p in allTags %}
+                    <li>
+                <a style="word-break:keep-all" class="tag" href="{{ p.url }}" title="{{ p.name }}">{{ p.name }}</a>
+                    </li>
+                {% /for %}
+            </ul>
+            
+        </section>
+    </aside>
+
+</article>
