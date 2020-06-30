@@ -13,7 +13,7 @@
         {{ siteName }}
         {% /if %}
     </title>
-    <meta name="author" content="Havee">
+    <meta name="author" content="Feiffy">
 
     <!-- fav and touch icons  -->
     <link rel="shortcut icon" href="asset/images/favicon.png">
@@ -31,11 +31,10 @@
     <!-- atom & rss feed -->
     <link rel="alternate" type="application/rss+xml" href="rss.xml" title="Feiffy RSS Feed">
 
-    <meta name="baidu-site-verification" content="BvD3CNBzK6" />
-    <meta name="google-site-verification" content="oE8rOfWaq0A-pkv0HY170kkzgB1hM1j6zRTyRBgRw78" />
-    <meta name="msvalidate.01" content="FE0D1D87A075E1003B82C7446EE360ED" />
+    {% if ext_valine.length %}
+    <script src='asset/Valine.min.js'></script>
+    {% /if %}
 </head>
-
 
 <body>
     <div class="container">

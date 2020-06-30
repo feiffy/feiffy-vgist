@@ -19,5 +19,14 @@
 {% /if %}
 </ul>
 
-
+{% if ext_valine %}
+<div id="vcomments"></div>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '{{ ext_valine_app_id }}',
+        appKey: '{{ ext_valine_app_key }}'
+    })
+</script>
+{% /if %}
 </article>

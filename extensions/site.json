@@ -54,5 +54,23 @@
       "variableName":"disqus_shortname",
       "inputFieldHeight":22,
       "exampleText":"disqus shortname"
+   },
+   {
+      "title":"valine",
+      "variableName":"valine",
+      "inputFieldHeight":22,
+      "exampleText":"是否启用valine评论，1-启用，不填-禁用（默认）"
+   },
+   {
+      "title":"valine_app_key",
+      "variableName":"valine_app_key",
+      "inputFieldHeight":22,
+      "exampleText":"Cyb4xg8zFaMsGb383PTyxh3t"
+   },
+   {
+      "title":"valine_app_id",
+      "variableName":"valine_app_id",
+      "inputFieldHeight":22,
+      "exampleText":"zkYpFd7wjlxRgQ6J3fVeo2QP-gzGzoHsa"
    }
 ]
