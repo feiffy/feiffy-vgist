@@ -2,7 +2,7 @@
 
 MWeb 网站主题 feiffy-vgist。  
 
-[演示网站（Demo Site）](http://test.feiffy.cc/blog/index.html)  
+[演示网站（Demo Site）](http://feiffy.cc/index.html)  
 
 ## 安装 (Install)
 
